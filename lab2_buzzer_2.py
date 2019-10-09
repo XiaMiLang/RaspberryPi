@@ -29,6 +29,3 @@ for f in freq:
 
 p.stop()
 GPIO.cleanup()
-
-
-
