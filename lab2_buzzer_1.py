@@ -21,8 +21,8 @@ delay = 0.2
 
 tunes = sys.argv[2].split(":")
 freq = []
-for fr in tunes:
-    freq.append(int(fr))
+for t in tunes:
+    freq.append(int(t))
 
 for f in freq:
     play_tunes(p, f, delay)
