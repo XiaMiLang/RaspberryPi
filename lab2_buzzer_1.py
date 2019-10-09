@@ -6,12 +6,12 @@ def play_tunes(p, freq, delay):
     p.ChangeFrequency(freq)
     time.sleep(delay)
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)	
 
-pin = int(sys.argv[1])
+pin = int(sys.argv[1])		#read from command line
 GPIO.setup(pin,GPIO.OUT)
 
-p = GPIO.PWM(pin, 50)    #p = GPIO.PWM(channel, frequency)
+p = GPIO.PWM(pin, 50)		#p = GPIO.PWM(channel, frequency)
 p.start(50)    #0 ~ 100
 delay = 0.2
 
