@@ -19,10 +19,24 @@ p = GPIO.PWM(pin, 50)		#p = GPIO.PWM(channel, frequency)
 p.start(50)    #0 ~ 100
 delay = 0.2
 
-tunes = sys.argv[2].split(":")
+
+filename = sys.argv[2]
+
+with open(filename, 'r') as f:
+    data = json.loads(f)
+
 freq = []
-for t in tunes:
-    freq.append(int(t))
+delay = []
+
+for d in data:
+    freq.append(int(d["freq"]))
+    delay.append(int(d["time"]))
+
+print freq
+print delay
+
+
+
 
 for f in freq:
     play_tunes(p, f, delay)
