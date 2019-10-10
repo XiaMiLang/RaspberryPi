@@ -2,11 +2,11 @@
 
 Raspberry Pi - Raspbian
 
-20190923 - lab00 - introduction
+lab00 - 20190923 - introduction
 
-20190930 - lab01 - LED
+lab01 - 20190930 - LED
 
-20191007 - lab02 - buzzer
+lab02 - 20191007 - buzzer
 
-20191014 - lab03 - DHT - temperature and humidity sensor
+lab03 - 20191014 - DHT - temperature and humidity sensor
 
