@@ -1,4 +1,4 @@
-#### This is a school class of CPS(Cyber-Physical Systems, 寰宇實體製造系統)
+## This is a school class of CPS(Cyber-Physical Systems, 寰宇實體製造系統)
 
 Raspberry Pi - Raspbian
 
