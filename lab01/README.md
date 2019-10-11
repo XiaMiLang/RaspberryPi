@@ -11,3 +11,7 @@
    * freq 可以是任意正整數。
 
 ![](https://github.com/XiaMiLang/RespberryPi/blob/master/lab01/lab01_led.JPG)
+
+17_led2.py 是同學的寫法
+
+TA_sample 為助教的範例
