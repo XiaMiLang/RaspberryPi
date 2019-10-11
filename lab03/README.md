@@ -1,4 +1,4 @@
-![]()
+![](https://github.com/XiaMiLang/RespberryPi/blob/master/lab03/lab03_DHT.JPG)
 
 reference: http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
 
