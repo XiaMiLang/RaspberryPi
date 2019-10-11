@@ -24,3 +24,4 @@ def doReMi():
     GPIO.cleanup()
 
 doReMi()
+ 
