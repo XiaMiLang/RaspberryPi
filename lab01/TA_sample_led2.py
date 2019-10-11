@@ -3,7 +3,7 @@
 This is a program for simple led control on RasberryPi(R)
 @author: FATESAIKOU
 @argv[1:]: ALL Pins for using
-"""
+""" 
 
 import RPi.GPIO as GPIO
 import sys
