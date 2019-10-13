@@ -18,5 +18,5 @@ To install the Adafruit DHT11 library:
 
 4. Then install the library with:
 
-   ​	sudo python setup.py install
+   ​	sudo python3 setup.py install
 
