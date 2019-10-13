@@ -11,12 +11,14 @@ To install the Adafruit DHT11 library:
 2. Change directories with:
 
    ​	cd Adafruit_Python_DHT
+   
+3. sudo apt-get update
 
-3. Now enter this:
+4. Now enter this:
 
    ​	sudo apt-get install build-essential python-dev
 
-4. Then install the library with:
+5. Then install the library with:
 
    ​	sudo python3 setup.py install
 
