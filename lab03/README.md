@@ -34,3 +34,5 @@ Condition: lab03_DHT.py [bcm_pin] [condition] [monit_time]
   * trigger when t >1
   * trigger when t>11 and h>0.43
   * trigger when t*100>h
+
+**Command Line inputs like this: python3 lab03_DHT.py 4 't>1 and h>10' 10**
