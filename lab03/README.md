@@ -22,3 +22,10 @@ To install the Adafruit DHT11 library:
 
    ​	sudo python3 setup.py install
 
+Condition: lab03_DHT.py [bcm_pin] [condition] [monit_time]
+a. use Adafruit_DHT module
+b. read bcm_pin from command line as the 1st input argument
+c. when [condition] triggered, execute something
+   1. trigger when t >1
+   2. trigger when t>11 and h>0.43
+   3. trigger when t*100>h
