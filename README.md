@@ -9,6 +9,3 @@ lab01 - 20190930 - LED
 lab02 - 20191007 - buzzer
 
 lab03 - 20191014 - DHT - temperature and humidity sensor
-
-
-
