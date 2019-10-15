@@ -10,3 +10,12 @@ lab02 - 20191007 - buzzer
 
 lab03 - 20191014 - DHT - temperature and humidity sensor
 
+
+
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+
