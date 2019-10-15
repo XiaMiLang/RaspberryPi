@@ -12,10 +12,5 @@ lab03 - 20191014 - DHT - temperature and humidity sensor
 
 
 
-@startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: Another authentication Response
-@enduml
+![https://coggle.it/diagram/XaWigbS0Bhk8JdoE/t/-/3001aa65df1f279dcc637bc89a13e26700c8eab27d5571e49021be3256e33583]()
 
