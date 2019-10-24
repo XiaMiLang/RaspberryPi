@@ -15,8 +15,9 @@
 執行:
 
 * 1st step: python3 irrecord.py 12 rec1.json
-
+* 先錄製按鈕訊號
 * 2nd step: python3 irrecogn.py 12 40 rec1.json
+* 再辨識按鈕訊號，並執行 led 明滅的指令
 
 
 
