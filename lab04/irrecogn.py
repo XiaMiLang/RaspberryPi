@@ -3,10 +3,11 @@ import time
 import sys
 import json
 
-def initEnv(pin):
+def initEnv(pin, ledPin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
     GPIO.setup(pin, GPIO.IN)
+    GPIO.setup(ledPin, GPIO.OUT)
 
 def endEnv():
     GPIO.cleanup()
@@ -39,15 +40,23 @@ def decodeSingal(s, signal_map, rang):
     
 def main():
     PIN = int(sys.argv[1])
-    SIGNAL_MAP = sys.argv[2]
+    ledPin = int(sys.argv[2])
+    SIGNAL_MAP = sys.argv[3]
     src = open(SIGNAL_MAP, 'r')
     signal_map = json.loads(src.read())
     src.close()
-    initEnv(PIN)
+    initEnv(PIN, ledPin)
+    
     while True:
         print("Please press key")
         s = getSignal(PIN)
-        print("You press: %s" % ( decodeSingal(s, signal_map, 0.06) ))
+        name = decodeSingal(s, signal_map, 0.06)
+        print("you pressed: %s" % name)
+        if name=="1":
+            GPIO.output(ledPin, True)
+        if name=="2":
+            GPIO.output(ledPin, False)        
+#        print("You press: %s" % ( decodeSingal(s, signal_map, 0.06) ))
     endEnv()
 
 if __name__ == "__main__":
