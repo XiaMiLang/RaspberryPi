@@ -1,13 +1,23 @@
 ## This is a school lesson - CPS(Cyber-Physical Systems, 寰宇實體製造系統)
 
-Raspberry Pi - Raspbian
+參考範例程式碼實做以下程式，並以規定介面執行：
 
-lab00 - 20190923 - introduction
+1. ./read_ir.py [ir_pin] [led_pin] [key_map]
+   * ir_pin, led_pin 以 GPIO.BOARD 為准
+   * key_map 為 紅外線的訊號檔案 key_map.json(亦可自行錄製)
+   * key_map.json時間請以毫秒為單位，每次接收到的符號請參考符號表
+   * 若使用者按下 1 則 LED 燈開啟 0 則關閉
+   * 符號表: 0 _
+   * 符號表: 1 |
+   * 符號表: start <
+   * 符號表: end >
 
-lab01 - 20190930 - LED
+執行:
 
-lab02 - 20191007 - buzzer
+* 1st step: python3 irrecord.py 12 rec1.json
 
-lab03 - 20191014 - DHT - temperature and humidity sensor
+* 2nd step: python3 irrecogn.py 12 40 rec1.json
 
 
+
+![]( https://github.com/XiaMiLang/RaspberryPi/blob/master/lab04/lab04_IR.JPG ) 
