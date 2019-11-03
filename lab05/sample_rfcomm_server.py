@@ -5,11 +5,9 @@ please check your BlueTooth connection before you start your testing.
 @author: FATESAIKOU
 @argv[1]: server name
 """
-
 import signal
 import sys
 from bluetooth import *
-
 
 # Service ending handler
 def end_service(signal, frame):
@@ -17,7 +15,6 @@ def end_service(signal, frame):
     print('[INFO] Ctrl+C captured, shutdown service.')
     service_on = False
     sys.exit(0)
-
 
 # Client request handler
 def handler(sock, info):
@@ -35,17 +32,14 @@ def handler(sock, info):
     except IOError:
         pass
         
-
 # Env init
 #UUID = '94f39d29-7d6d-437d-973b-fba39e49d4ee'
 UUID = '00001112-0000-1000-8000-00805f9b34fb'
 SERVER_NAME = sys.argv[1]
 service_on = True
 
-
 # Add terminator
 signal.signal(signal.SIGINT, end_service)
-
 
 # Create service socket
 server_sock = BluetoothSocket(RFCOMM)
@@ -53,16 +47,14 @@ server_sock.bind( ('', PORT_ANY) )
 server_sock.listen(1)
 port = server_sock.getsockname()[1]
 
-
 # Advertise your service
 advertise_service(
     server_sock,
     SERVER_NAME,
-    service_id      = UUID,
-    service_classes = [ UUID, SERIAL_PORT_CLASS ],
-    profiles        = [ SERIAL_PORT_PROFILE ]
+    service_id=UUID,
+    service_classes = [UUID, SERIAL_PORT_CLASS],
+    profiles=[SERIAL_PORT_PROFILE]
 )
-
 
 # Start service
 print('[INFO] Service listening at port %d' % port)
