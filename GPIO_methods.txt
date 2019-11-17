@@ -1,0 +1,61 @@
+# to set pin numbering system
+GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
+
+# to detect pin numbering system
+mode = GPIO.getmode()
+
+# WARNINGS, to disable warnings
+GPIO.setwarnings(False)
+
+# setup a channel to as input or output
+GPIO.setup(channel, GPIO.IN)
+GPIO.setup(channel, GPIO.OUT)
+GPIO.setup(channel, GPIO.OUT, initial=GPIO.HIGH)
+
+# set up more than one channel per call
+chan_list = [11, 12]
+GPIO.setup(chan_list, GPIO.OUT)
+
+# INPUT, to read the input state of a GPIO pin
+# 0/GPIO.LOW/False
+# 1/GPIO.HIGH/True
+GPIO.input(channel)
+
+# OUTPUT, to set the output state of a GPIO pin
+# 0/GPIO.LOW/False
+# 1/GPIO.HIGH/True
+GPIO.output(channel, state)
+
+# OUTPUT to several channels
+chan_list = [11,12]                             # also works with tuples
+GPIO.output(chan_list, GPIO.LOW)                # sets all to GPIO.LOW
+GPIO.output(chan_list, (GPIO.HIGH, GPIO.LOW))   # sets first HIGH and second LOW
+
+# to clean up at the end of your script
+GPIO.cleanup()
+
+# to clean up individual channel
+GPIO.cleanup(channel)
+GPIO.cleanup( (channel1, channel2) )
+GPIO.cleanup( [channel1, channel2] )
+
+# to discover information about your RPi:
+GPIO.RPI_INFO
+
+# to discover the Raspberry Pi board revision:
+GPIO.RPI_INFO['P1_REVISION']
+GPIO.RPI_REVISION    (deprecated)
+
+# to discover the version of RPi.GPIO
+GPIO.VERSION
+
+
+
+
+
+
+
+
+
+
