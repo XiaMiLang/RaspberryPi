@@ -69,8 +69,8 @@ def handler(sock, info):
     except IOError:
         pass
 # Env init
-#UUID = '94f39d29-7d6d-437d-973b-fba39e49d4ee'
-UUID = '00001112-0000-1000-8000-00805f9b34fb'
+UUID = '94f39d29-7d6d-437d-973b-fba39e49d4ee'
+#UUID = '00001112-0000-1000-8000-00805f9b34fb'
 SERVER_NAME = sys.argv[1]
 service_on = True
 
